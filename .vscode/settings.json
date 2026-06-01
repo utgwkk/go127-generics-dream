@@ -1,0 +1,6 @@
+{
+    "go.alternateTools": {
+        "go": "~/sdk/gotip/bin/go",
+        "gopls": "~/go/bin/gopls"
+    }
+}
