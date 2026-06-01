@@ -11,7 +11,7 @@ func ExampleHandler() {
 		Name string `json:"name"`
 	}
 
-	NewHandler().
-		Handle("POST /user", func(w http.ResponseWriter, r *http.Request, data CreateUserRequest) {}).
-		Handle("POST /blog", func(w http.ResponseWriter, r *http.Request, data CreateBlogRequest) {})
+	app := NewHandler()
+	app.Handle("POST /user", func(w http.ResponseWriter, r *http.Request, data CreateUserRequest) {})
+	app.Handle("POST /blog", func(w http.ResponseWriter, r *http.Request, data CreateBlogRequest) {})
 }
