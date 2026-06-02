@@ -1,5 +1,7 @@
 package parser
 
+// このコードはGo 1.27 (HEAD) でもコンパイルできません
+
 // Parser は入力の先頭を消費して型 T の値を生成する。
 type Parser[T any] struct {
 	run func(input string) (value T, rest string, ok bool)
